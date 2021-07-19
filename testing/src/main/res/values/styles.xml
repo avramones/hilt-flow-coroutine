@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyDatePickerStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/color_red_assent</item>
+        <item name="colorControlActivated">@color/color_background_black_brand</item>
+        <item name="android:selectableItemBackgroundBorderless">@color/color_transparent</item>
+        <item name="colorControlHighlight">@color/color_background_black_brand</item>
+        <item name="android:windowBackground">@color/color_background</item>
+        <item name="android:textColor">@color/color_background_black_brand</item>
+        <item name="android:labelTextSize">@dimen/_10sdp</item>
+        <item name="android:textColorSecondary">@color/color_red_assent</item>
+        <item name="android:textColorPrimary">@color/color_background_black_brand</item>
+        <item name="android:textColorPrimaryInverse">@color/color_white</item>
+        <item name="android:textColorSecondaryInverse">@color/color_background_black_brand</item>
+
+    </style>
+
+</resources>

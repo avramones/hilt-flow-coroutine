@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.harry.harrypotter.ui.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.harry.harrypotter.ui.fragments.PersonFragment"
+        android:label="PersonFragment" >
+        <action
+            android:id="@+id/action_personFragment_to_wandFragment"
+            app:destination="@id/wandFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wandFragment"
+        android:name="com.harry.harrypotter.ui.fragments.WandFragment"
+        android:label="WandFragment" />
+</navigation>
