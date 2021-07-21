@@ -2,7 +2,6 @@ package com.harry.harrypotter.data.api
 
 import com.harry.harrypotter.model.Person
 import com.harry.harrypotter.utils.AppConstants
-import io.reactivex.Observable
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import okhttp3.OkHttpClient
@@ -18,9 +17,9 @@ class ApiClient @Inject constructor() {
 
     private val apiService: ApiService
 
-    suspend fun loadCharacters(house: String?): Flow<List<Person>?> {
-        return flow { emit(apiService.loadCharacters(house)) }
-    }
+    fun loadCharacters(house: String?) =
+        flow { emit(apiService.loadCharacters(house)) }
+
 
     init {
         val logging = HttpLoggingInterceptor()

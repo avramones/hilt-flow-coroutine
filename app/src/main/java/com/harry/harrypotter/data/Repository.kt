@@ -5,7 +5,6 @@ import com.harry.harrypotter.data.local.LocalClient
 import com.harry.harrypotter.model.Person
 import com.harry.harrypotter.utils.NetworkUtils
 import com.harry.harrypotter.utils.Utils
-import io.reactivex.Observable
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -17,13 +16,13 @@ class Repository @Inject constructor(
     private val networkUtils: NetworkUtils
 ) {
 
-    suspend fun loadCharacters(house: String?): Flow<List<Person>?> {
-        return if (networkUtils.isNetworkAvailable()) {
+    fun loadCharacters(house: String?) =
+        if (networkUtils.isNetworkAvailable()) {
             apiClient.loadCharacters(house)
         } else localClient.getAllCharacters(Utils.capitalize(house))
-    }
+
 
     suspend fun insertCharacters(people: List<Person>?) {
-        return localClient.insertAll(people)
+        localClient.insertAll(people)
     }
 }

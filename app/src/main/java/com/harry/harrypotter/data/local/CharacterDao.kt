@@ -12,5 +12,5 @@ interface CharacterDao {
     suspend fun insertAll(people: List<Person>?)
 
     @Query("SELECT * FROM characters WHERE house == :house")
-    suspend fun loadAllCharacters(house: String?): List<Person>?
+    fun loadAllCharacters(house: String?): List<Person>?
 }
